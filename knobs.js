@@ -1,5 +1,4 @@
 
-
 var knobPositionX;
 var knobPositionY;
 var mouseX;

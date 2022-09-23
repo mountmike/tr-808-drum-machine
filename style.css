@@ -7,6 +7,7 @@
     --lightgrey: #CCCCCC;
     --beige: #EDE4C6;
     --red: #FF0000;
+    --yellow: rgb(234, 178, 16);
 }
 
 body {
@@ -27,12 +28,14 @@ h2 {
     font-family: "ITC Serif Gothic W03", Helvetica, Arial, sans-serif;
     color: var(--orange1);
     font-size: 35px;
+    margin-bottom: 5px;
 }
 
 h3 {
     font-family: "ITC Serif Gothic W03", Helvetica, Arial, sans-serif;
     color: var(--lightgrey);
     font-size: 17px;
+    margin-top: 5px;
 }
 
 footer {
@@ -44,11 +47,11 @@ footer {
 .tr-808-container {
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    width: 1300px;
     height: 600px;
     background-color: var(--darkgrey);
     border-radius: 20px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .top-half-container {
@@ -63,6 +66,8 @@ footer {
     display: flex;
     flex: 1;
     margin: 5px;
+    padding: 5px;
+    border-top: 4px solid var(--lightgrey);
 }
 
 .top-left-container {
@@ -87,7 +92,7 @@ footer {
 .bottom-right-container {
     display: flex;
     flex-direction: column;
-    flex: 2;
+    flex: 3;
 }
 
 .sample-mixer-container {
@@ -103,12 +108,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-around;
-    gap: ;
     border-right: 1px solid var(--lightgrey);
     border-left: 2px solid var(--lightgrey);
-    width: 65px;
-
+    width: 70px;
 }
 
 .sample-name {  
@@ -116,10 +118,12 @@ footer {
     color: var(--grey);
     border-radius: 5px;
     font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 12px;
-    padding: 5px 0px;
-    margin: 0 2px;
+    font-weight: 300;
+    font-size: 11px;
+    padding: 7px 2px;
+    margin: 0 20px;
+    width: 80%;
+    text-align: center;
 }
 
 .instrument-name-container {
@@ -135,31 +139,30 @@ footer {
     background-color: var(--orange1);
 }
 
+#grey-line {
+    margin: 5px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--darkgrey);
+}
+
 #mixer-text {
     color: var(--lightgrey);
     font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
     font-size: 10px;
 }
 
-
-
-
-
 .knob-surround {
     position: relative;
-    background-color: var(--red);
-    width: 25px;
-    height: 25px;
+    background-color: var(--orange1);
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: solid 0.15em #0e0e0e;
     margin: 5em auto;
-    background: var(--red);
-    
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#131313', endColorstr='#1d1d1d', GradientType=0);
-    -webkit-box-shadow: 0 0.2em 0.1em 0.05em rgba(255, 255, 255, 0.1) inset, 0 -0.2em 0.1em 0.05em rgba(0, 0, 0, 0.5) inset, 0 0.5em 0.65em 0 rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 0.2em 0.1em 0.05em rgba(255, 255, 255, 0.1) inset, 0 -0.2em 0.1em 0.05em rgba(0, 0, 0, 0.5) inset, 0 0.5em 0.65em 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0.2em 0.1em 0.05em rgba(255, 255, 255, 0.1) inset, 0 -0.2em 0.1em 0.05em rgba(0, 0, 0, 0.5) inset, 0 0.5em 0.65em 0 rgba(0, 0, 0, 0.3);
+    background: var(--orange1);
   }
+
   .knob {
     position: absolute;
     width: 100%;
@@ -171,6 +174,7 @@ footer {
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
     z-index: 10;
+
   }
   .knob:before {
     content: "";
@@ -185,6 +189,7 @@ footer {
     -moz-box-shadow: 0 0 0.4em 0 #79c3f4;
     box-shadow: 0 0 0.4em 0 #79c3f4;
   }
+
   .min,
   .max {
     display: block;
@@ -196,17 +201,20 @@ footer {
     position: absolute;
     opacity: 0.5;
   }
+
   .min {
     bottom: 1em;
     left: -2.5em;
   }
+
   .max {
     bottom: 1em;
     right: -2.5em;
   }
+
   .tick {
     position: absolute;
-    font-size: 7px;
+    font-size: 8px;
     width: 100%;
     height: 100%;
     top: 0;
@@ -214,6 +222,7 @@ footer {
     z-index: 5;
     overflow: visible;
   }
+
   .tick:after {
     content: "";
     width: 0.08em;
@@ -228,3 +237,49 @@ footer {
     transition: all 180ms ease-out;
   }
 
+  .flex-shapes-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row1, .row2, .row3, .row4  {
+    display: flex;
+    margin: -15px; 
+  }
+
+  .flex-shapes-container figure {
+    background-color: var(--lightgrey);
+    flex-grow: 1;
+    border-radius: 5px;
+  }
+
+  .buttons-section {
+    display: flex;
+  }
+
+  .button-container {
+    display: flex;
+  }
+
+  .samplebtn {
+
+  }
+.stop-start-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--lightgrey);
+    border-radius: 5px;
+    height: 100%;
+    width: 100px;
+    margin: 10px;
+    padding: 5px;
+}
+
+#start-stop {
+    background-color: var(--yellow);
+    font-size: 10px;
+    width: 70%;
+    margin: 20px;
+}
