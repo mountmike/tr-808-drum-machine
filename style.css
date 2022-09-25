@@ -9,6 +9,7 @@
     --orange1: #F15A24;
     --orange2: #EA7F13;
     --darkgrey: #333333;
+    --midgrey: #4D4D4D;
     --lightgrey: #CCCCCC;
     --beige: #EDE4C6;
     --red: #FF0000;
@@ -239,7 +240,7 @@ footer {
     font-size: 10px;
     width: 70%;
     margin: 20px;
-  font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
 }
 
 .pattern-instrument-container {
@@ -248,13 +249,83 @@ footer {
   gap: 10px;
 }
 
-.instrument-selector {
+.pattern-write-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pattern-write-knob {
+  background-color: var(--midgrey);
+  width: 60px;
+  height: 60px;
+  border: black 2px solid;
+  border-radius: 80px;
+}
+
+.pattern-write-container p {
+  text-align: center;
+  font-size: 10px;
+  color: var(--beige);
+  font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
+  border: solid 1px var(--beige);
+  padding: 0px 5px;
+}
+
+.instrument-selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instrument-selector-container p {
+  text-align: center;
+  font-size: 10px;
+  color: var(--beige);
+  font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
 }
 
 .tempo-container {
   display: flex;
+  flex-direction: column;
 }
+
+.tempo-knob {
+  background-color: var(--midgrey);
+  width: 130px;
+  height: 130px;
+  border: black 2px solid;
+  border-radius: 130px;
+}
+
+.tempo-container p {
+  text-align: center;
+  font-size: 10px;
+  color: var(--lightgrey);
+  font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
+}
+
+.instrument-selector-knob {
+  background-color: var(--midgrey);
+  width: 60px;
+  height: 60px;
+  border: black 2px solid;
+  border-radius: 80px;
+  
+}
+
+.facing-direction {
+  width: 12px;
+  height: 5px;
+  rotate: 45deg;
+  background-color: var(--orange1);
+  margin: 10px;
+}
+
+
+
+
+
 
 .knob-surround {
   position: relative;
