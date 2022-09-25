@@ -81,6 +81,7 @@ footer {
     flex: 1;
     justify-content: space-around;
     align-items: center;
+    border-right: 4px solid var(--lightgrey);
 }
 
 .top-right-container {
@@ -113,8 +114,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid var(--lightgrey);
-    border-left: 2px solid var(--lightgrey);
+    border-right: 2px solid var(--lightgrey);
+    
     width: 80px;
     justify-content: space-between;
 }
@@ -174,16 +175,35 @@ footer {
   .row1, .row2, .row3, .row4  {
     display: flex;
     justify-content: space-between;
+    text-align: justify;
+    justify-content: flex-start;
     
   }
 
+  #smallnote {
+    flex-grow: 1;
+    padding-left: 20px;
+  }
+
+  #mediumnote {
+    flex-grow: 6.2;
+  }
+
+  #largenote {
+    flex-grow: 9.6;
+  }
+
+
   .flex-shapes-container button {
+    display: flex;
+    justify-content: space-between;
     background-color: var(--lightgrey);
     border-radius: 5px;
     flex: auto;
     margin: 1px 4px;
     height: 20px;
     border: none;
+    flex-grow: 10;
   }
 
   .buttons-section {
