@@ -109,7 +109,7 @@ footer {
     
 }
 
-.sample-container {
+.sample-channel-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,13 +119,19 @@ footer {
     justify-content: space-between;
 }
 
+.gain-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
 .sample-name {  
     background-color: var(--beige);
     color: var(--grey);
     border-radius: 5px;
     font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
     font-weight: 300;
-    font-size: 10px;
+    font-size: 12px;
     padding: 7px 1px;
     margin: 0 20px;
     width: 80%;
@@ -265,11 +271,11 @@ footer {
 
 .pattern-write-container p {
   text-align: center;
-  font-size: 10px;
+  font-size: 9px;
   color: var(--beige);
   font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
   border: solid 1px var(--beige);
-  padding: 0px 5px;
+  padding: 1px 5px;
 }
 
 .instrument-selector-container {
@@ -280,9 +286,10 @@ footer {
 
 .instrument-selector-container p {
   text-align: center;
-  font-size: 10px;
+  font-size: 9px;
   color: var(--beige);
   font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
+  padding: 2px 5px;
 }
 
 .tempo-container {
@@ -333,8 +340,8 @@ footer {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: solid 0.15em #0e0e0e;
-  margin: 5em auto;
+  border: solid 0.2em #0e0e0e;
+  margin-top: 10px;
   background: var(--orange1);
 }
 

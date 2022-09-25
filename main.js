@@ -17,5 +17,6 @@ const closedHatSample = new Audio("TR808/CH/CH.wav");
 const bassDrumBtn = document.querySelector('#s1');
 
 bassDrumBtn.addEventListener('click', function() {
-    bassDrumSample.play();
+  bassDrumSample.currentTime = 0;
+  bassDrumSample.play();
   });
