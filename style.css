@@ -6,7 +6,8 @@
 
 
 :root {
-    --orange1: #F45910;
+    --orange1: #F15A24;
+    --orange2: #EA7F13;
     --darkgrey: #333333;
     --lightgrey: #CCCCCC;
     --beige: #EDE4C6;
@@ -201,10 +202,21 @@ footer {
   .samplebtn {
     height: 60px;
     width: 40px;
-    background-color: var(--red);
     border: 2px black solid;
     border-radius: 3px;
   }
+
+#s1, #s2, #s3, #s4 {
+  background-color: var(--orange1);
+}
+
+#s5, #s6, #s7, #s8 {
+  background-color: var(--orange2);
+}
+
+#s9, #s10, #s11, #s12 {
+  background-color: var(--yellow);
+}
 
 #variation {
   font-size: 10PX;
@@ -328,4 +340,58 @@ footer {
   -moz-transition: all 180ms ease-out;
   -o-transition: all 180ms ease-out;
   transition: all 180ms ease-out;
+}
+
+.blinking {
+  -webkit-animation: 1s blink ease infinite;
+  -moz-animation: 1s blink ease infinite;
+  -ms-animation: 1s blink ease infinite;
+  -o-animation: 1s blink ease infinite;
+  animation: 1s blink ease infinite;
+  
+}
+
+@keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
