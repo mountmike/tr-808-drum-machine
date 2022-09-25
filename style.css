@@ -202,8 +202,7 @@ footer {
   .samplebtn {
     height: 60px;
     width: 40px;
-    border: 2px black solid;
-    border-radius: 3px;
+  
   }
 
 #s1, #s2, #s3, #s4 {
