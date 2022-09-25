@@ -16,7 +16,18 @@
     </header>
     <main class="tr-808-container">
         <div class="top-half-container">
-            <div class="top-left-container">top left container
+            <div class="top-left-container">
+                <div class="pattern-instrument-container">
+                    <div class="patter-write"> 
+                        pattern write
+                    </div>
+                    <div class="instrument-selector">
+                    instrument selector
+                    </div>
+                </div>
+                <div class="tempo-container">
+                    tempo container
+                </div>
             </div>
                 <div class="top-right-container">
                     <div class="sample-mixer-container">
@@ -28,7 +39,7 @@
                                 <span class="max"></span>
                                 <div id="ACtickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">ACcent</div>
+                            <div class="sample-name"><b>AC</b>cent</div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -38,7 +49,7 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">BassDrum</div>
+                            <div class="sample-name"><b>B</b>ass<b>D</b>rum</div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -48,7 +59,7 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">SnareDrum</div>
+                            <div class="sample-name"><b>S</b>nare<b>D</b>rum</div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -58,7 +69,7 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">LowTom</div>
+                            <div class="sample-name"><b>L</b>ow<b>T</b>om</div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -68,7 +79,7 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">MidTom</div>
+                            <div class="sample-name"><b>M</b>id<b>T</b>om</div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -78,7 +89,7 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">HiTom</div>
+                            <div class="sample-name"><b>H</b>i<b>T</b>om</div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -88,7 +99,7 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">RimShot</div>
+                            <div class="sample-name"><b>R</b>im<b>S</b>hot</div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -98,7 +109,7 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">ClaP</div>
+                            <div class="sample-name"><b>C</b>la<b>P</b></div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -108,7 +119,7 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">CowBell</div>
+                            <div class="sample-name"><b>C</b>ow<b>B</b>ell</div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -118,7 +129,7 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">CYmbal</div>
+                            <div class="sample-name"><b>CY</b>mbal</div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -128,7 +139,7 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">OpenHat</div>
+                            <div class="sample-name"><b>O</b>pen<b>H</b>at</div>
                         </div>
                         <div class="sample-container">
                             <p id="mixer-text">LEVEL</p>
@@ -138,19 +149,20 @@
                                 <span class="max"></span>
                                 <div id="tickContainer" class="ticks"></div>
                             </div>
-                            <div class="sample-name">ClosedHat</div>
+                            <div class="sample-name"><b>C</b>losed<b>H</b>at</div>
                         </div>
                     </div>
                     <div class="instrument-name-container">
                         <h2>Rhythm Composer TR-808</h2>
                         <div id="orange-line"></div>
-                        <h3>Computer Controlled</h3>
+                        <h3>JavaScript Controlled</h3>
                     </div>
                 </div>
         </div>
         <div class="bottom-half-container">
             <div class="bottom-left-container">
                 <div class="stop-start-container">
+                    <button id="variation">BASIC - VARIATION</button>
                     <div id="grey-line"></div>
                     <button id="start-stop">
                         <p>START</p>
@@ -162,21 +174,82 @@
             <div class="bottom-right-container">
                 <div class="flex-shapes-container">
                     <div class="row1">
-                        <figure>1</figure><figure>2</figure><figure>3</figure><figure>4</figure><figure>5</figure>
+                        <button>1</button><button>2</button><button>3</button><button>4</button><button>5</button>
                     </div>
                     <div class="row2">
-                        <figure>1</figure><figure>2</figure><figure>3</figure>
+                        <button>1</button><button>2</button><button>3</button>
                     </div> 
                     <div class="row3">
-                        <figure>1</figure><figure>2</figure><figure>3</figure><figure>4</figure>
+                        <button>1</button><button>2</button><button>3</button><button>4</button>
                     </div> 
                     <div class="row4">
-                        <figure>1</figure><figure>2</figure>
-                    </div>                
+                        <button>1</button><button>2</button>
+                    </div>          
                 </div>
                 <div class="buttons-section">
                     <div class="button-container">
-                        <button class="samplebtn"></button>
+                        <p>1</p>
+                        <button class="samplebtn" id="s1"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>2</p>
+                        <button class="samplebtn" id="s2"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>3</p>
+                        <button class="samplebtn" id="s3"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>4</p>
+                        <button class="samplebtn" id="s4"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>5</p>
+                        <button class="samplebtn" id="s5"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>6</p>
+                        <button class="samplebtn" id="s6"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>7</p>
+                        <button class="samplebtn" id="s7"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>8</p>
+                        <button class="samplebtn" id="s8"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>9</p>
+                        <button class="samplebtn" id="s9"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>10</p>
+                        <button class="samplebtn" id="s10"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>11</p>
+                        <button class="samplebtn" id="s11"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>12</p>
+                        <button class="samplebtn" id="s12"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>13</p>
+                        <button class="samplebtn" id="s13"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>14</p>
+                        <button class="samplebtn" id="s14"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>15</p>
+                        <button class="samplebtn" id="s15"></button>
+                    </div>
+                    <div class="button-container">
+                        <p>16</p>
+                        <button class="samplebtn" id="s16"></button>
                     </div>
                 </div>
             </div>
