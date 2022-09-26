@@ -25,7 +25,7 @@ body {
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--orange1);
+    background-color: var(--orange1); 
     margin: 0;
     height: 100%;
 }
@@ -58,7 +58,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 1300px;
-    height: 700px;
+    height: 750px;
     background-color: var(--darkgrey);
     border-radius: 20px;
     padding: 15px;
@@ -87,6 +87,7 @@ footer {
     align-items: center;
     border-right: 4px solid var(--lightgrey);
     padding: 30px 0px;
+    margin-top: 5px;
 }
 
 .top-right-container {
@@ -126,19 +127,23 @@ footer {
     align-items: center;
     border-right: 2px solid var(--lightgrey);
     width: 80px;
+    height: 350px;
     justify-content: space-between;
+    margin-top: 5px;
 }
 
 .gain-container {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  align-items: center;
 }
 
 .tone-container {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  align-items: center;
 }
 
 .sample-name {  
@@ -148,10 +153,43 @@ footer {
     font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 12px;
-    padding: 7px 1px;
-    margin-top: 40px;
+    padding: 7px 3px;
     width: 80%;
     text-align: center;
+}
+
+.sample-name b {
+  font-size: 14px;
+}
+
+.sample-toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sample-toggle-btn {
+  width: 15px;
+  height: 30px;
+  background-color: var(--lightgrey);
+  border-radius: 30px;
+  padding: 3px;
+}
+
+.sample-toggle-btn.active {
+  background-color: var(--yellow);
+}
+
+.sample-toggle-btn.active > .sample-inner-circle {
+  margin-top: 15px;
+}
+
+.sample-inner-circle {
+  width: 15px;
+  height: 15px;
+  background-color: var(--darkgrey);
+  border-radius: 50%;
 }
 
 .instrument-name-container {
@@ -182,6 +220,10 @@ footer {
     justify-content: center;
     align-items: center;
     flex: 2;
+    border-right: 2px solid var(--lightgrey);
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 .master-volume-container p {
@@ -202,7 +244,7 @@ footer {
 #mixer-text {
     color: var(--lightgrey);
     font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
   .flex-shapes-container {
@@ -333,7 +375,7 @@ footer {
   margin-top: 10px;
 }
 
-.toggle-btn {
+.pattern-toggle-btn {
   width: 80px;
   height: 20px;
   background-color: var(--darkgrey);
@@ -341,15 +383,15 @@ footer {
   padding: 5px;
 }
 
-.toggle-btn.active {
+.pattern-toggle-btn.active {
   background-color: var(--orange2);
 }
 
-.toggle-btn.active > .inner-circle {
+.pattern-toggle-btn.active > .pattern-inner-circle {
   margin-left: 60px;
 }
 
-.inner-circle {
+.pattern-inner-circle {
   width: 20px;
   height: 20px;
   background-color: var(--lightgrey);
