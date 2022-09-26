@@ -20,3 +20,6 @@ bassDrumBtn.addEventListener('click', function() {
   bassDrumSample.currentTime = 0;
   bassDrumSample.play();
   });
+
+
+
