@@ -14,8 +14,8 @@ var volumeSetting;
 var tickHighlightPosition;
 var audio = new Audio("https://www.cineblueone.com/maskWall/audio/skylar.mp"); //Celine Dion's "Ashes"
 var startingTickAngle = -135;
-var tickContainer = document.getElementById("ACtickContainer");
-var volumeKnob = document.getElementById("ACknob");
+var tickContainer = document.getElementById("AcTickContainer");
+var volumeKnob = document.getElementById("AcKnob");
 var boundingRectangle = volumeKnob.getBoundingClientRect(); //get rectangular geometric data of knob (x, y, width, height)
 
 function main()

@@ -1,3 +1,11 @@
+// Disable text selection on whole page
+
+const disableselect = (e) => {  
+  return false  
+}  
+document.onselectstart = disableselect  
+document.onmousedown = disableselect
+
 // Loading all samples to variables
 const bassDrumSample = new Audio("TR808/BD/BD5050.wav");
 const snareDrumSample = new Audio("TR808/SD/SD5050.wav");
@@ -20,6 +28,8 @@ bassDrumBtn.addEventListener('click', function() {
   bassDrumSample.currentTime = 0;
   bassDrumSample.play();
   });
+
+
 
 
 
