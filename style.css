@@ -58,7 +58,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 1300px;
-    height: 750px;
+    height: 800px;
     background-color: var(--darkgrey);
     border-radius: 20px;
     padding: 15px;
@@ -137,6 +137,7 @@ footer {
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  flex: 2;
 }
 
 .tone-container {
@@ -144,6 +145,15 @@ footer {
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  flex: 2;
+}
+
+.tempy-tone-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  flex: 2;
 }
 
 .sample-name {  
@@ -156,6 +166,7 @@ footer {
     padding: 7px 3px;
     width: 80%;
     text-align: center;
+    
 }
 
 .sample-name b {
@@ -167,6 +178,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex: 1.4;
 }
 
 .sample-toggle-btn {
@@ -182,10 +194,11 @@ footer {
 }
 
 .sample-toggle-btn.active > .sample-inner-circle {
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 .sample-inner-circle {
+  margin-top: 15px;
   width: 15px;
   height: 15px;
   background-color: var(--darkgrey);
@@ -309,10 +322,21 @@ footer {
   }
 
   .samplebtn {
-    height: 90px;
+    height: 100px;
     width: 60px;
-  
-  }
+    border-radius: 5px;
+    border: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.samplebtn:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px;
+}
+
+.samplebtn:active {
+  transform: scale(1);
+}
 
 .pre-scale-container {
   display: flex;
@@ -366,6 +390,7 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 75%;
+  margin-bottom: -20px;
 }
 
 .A-B p {
@@ -416,10 +441,22 @@ footer {
     background-color: var(--yellow);
     border-width: 5px;
     font-size: 10px;
-    width: 70%;
+    width: 75%;
     height: 30%;
-    margin: 20px;
+    margin: 0px 20px 20px 20px;
     padding: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.1s ease-in-out;
+}
+
+#start-stop:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px;
+}
+
+#start-stop:active {
+  transform: scale(1);
 }
 
 #start-stop p {
@@ -522,7 +559,7 @@ footer {
   width: 98%%;
   height: 40px;
   border-radius: 5px;
-  margin: -10px 5px 0px 5px;
+  margin: -20px 5px 0px 5px;
 }
 
 .bassic-rhythm {
