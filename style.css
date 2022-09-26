@@ -4,6 +4,10 @@
 }
 
 
+@font-face {
+  font-family: ITC Serif Gothic W03;
+  src: url(ITCSerifGothicW03.ttf);
+}
 
 :root {
     --orange1: #F15A24;
@@ -99,7 +103,7 @@ footer {
 .bottom-left-container {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: .66;
 }
 
 .bottom-right-container {
@@ -192,7 +196,7 @@ footer {
 #mixer-text {
     color: var(--lightgrey);
     font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
-    font-size: 10px;
+    font-size: 12px;
 }
 
   .flex-shapes-container {
@@ -240,7 +244,6 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-top: 0px;
-
   }
 
   .button-container {
@@ -254,7 +257,7 @@ footer {
     text-align: center;
     font-size: 12px;
     font-weight:900;
-    height: 0px;
+    height: 5px;
   }
 
   .samplebtn {
@@ -262,6 +265,21 @@ footer {
     width: 40px;
   
   }
+
+.pre-scale-container {
+  display: flex;
+  flex: .33;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre-scale-container p {
+  text-align: center;
+  font-size: 10px;
+  font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: var(--lightgrey)
+}
 
 #s1, #s2, #s3, #s4 {
   background-color: var(--orange1);
@@ -281,13 +299,12 @@ footer {
 
 .stop-start-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: var(--lightgrey);
     border-radius: 5px;
     height: 100%;
-    width: 60%;
     margin-top: 10px;
 
 }
