@@ -322,11 +322,24 @@ footer {
   }
 
   .samplebtn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     height: 100px;
     width: 60px;
     border-radius: 5px;
     border: none;
     transition: all 0.1s ease-in-out;
+}
+
+#red-blink {
+  margin-top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #570000;
+  border: 5px solid rgba(116, 116, 116, 0.5);
+
 }
 
 .samplebtn:hover {
