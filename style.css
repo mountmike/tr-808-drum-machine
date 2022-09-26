@@ -254,10 +254,11 @@ footer {
     text-align: center;
     font-size: 12px;
     font-weight:900;
+    height: 0px;
   }
 
   .samplebtn {
-    height: 60px;
+    height: 70px;
     width: 40px;
   
   }
@@ -383,7 +384,7 @@ footer {
   display: flex;
   align-items: center;
   background-color: var(--lightgrey);
-  width: 100%;
+  width: 98%%;
   height: 40px;
   border-radius: 5px;
   margin: -10px 5px 0px 5px;
@@ -409,8 +410,17 @@ footer {
   flex:4;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  color: var(--darkgrey);
+  font-family: "Helvetica LT W04", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
 }
 
+.bottom-nums p {
+  width: 40px;
+  text-align: center;
+}
 
 
 
@@ -504,14 +514,6 @@ footer {
   transition: all 180ms ease-out;
 }
 
-.blinking {
-  -webkit-animation: 1s blink ease infinite;
-  -moz-animation: 1s blink ease infinite;
-  -ms-animation: 1s blink ease infinite;
-  -o-animation: 1s blink ease infinite;
-  animation: 1s blink ease infinite;
-  
-}
 
 @keyframes "blink" {
   from, to {
