@@ -30,6 +30,3 @@ bassDrumBtn.addEventListener('click', function() {
   });
 
 
-
-
-

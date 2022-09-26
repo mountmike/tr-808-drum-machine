@@ -12,7 +12,7 @@ var getRadiansInDegrees;
 var finalAngleInDegrees;
 var volumeSetting;
 var tickHighlightPosition;
-var audio = new Audio("https://www.cineblueone.com/maskWall/audio/skylar.mp"); //Celine Dion's "Ashes"
+var audio; //Celine Dion's "Ashes"
 var startingTickAngle = -135;
 var tickContainer = document.getElementById("AcTickContainer");
 var volumeKnob = document.getElementById("AcKnob");
