@@ -1,5 +1,7 @@
 // Disable text selection on whole page
 
+const { start } = require("tone");
+
 const disableselect = (e) => {  
   return false  
 }  
@@ -19,7 +21,3 @@ const cymbalSample = new Audio("TR808/CY/CY0010.wav");
 const openHatSample = new Audio("TR808/OH/OH10.wav");
 const closedHatSample = new Audio("TR808/CH/CH.wav");
 
-
-const toggle = document.querySelector('#s1');
-
-toggle.addEventListener('click', console.log('he');
