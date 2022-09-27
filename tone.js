@@ -8,71 +8,76 @@ function mousePressed(){
   //place other code needed in function mousePressed() here
 }
 
+console.clear();
 
-const samples = [
+// UPDATE: there is a problem in chrome with starting audio context
+//  before a user gesture. This fixes it.
+document.documentElement.addEventListener('mousedown', () => {
+  if (Tone.context.state !== 'running') Tone.context.resume();
+});
+
+
+
+
+const samplers = [
   new Tone.Sampler({
 	"C1" : "TR808/BD/BD5050.wav",
 	"C2" : "TR808/SD/SD5050.wav",
 }),
-
 ];
 
-// new sequence
-let pattern1 = new Tone.Sequence(function(time, note){
+// SEQUENCES 
+let BDSequence = [[null, "C1", null, null], [null, null, null, null], [null, null, null, null],[null, null, null, null]];
+
+let pattern1 = 
+  new Tone.Sequence(function(time, note){
+  samplers[0].triggerAttackRelease(note, 0.9);
 	console.log(note);
-//straight quater notes
-}, ["C1", "C1", "C1", "C1"], "4n");
+}, BDSequence, "4n");
 
 
-const gain = new Tone.Gain(0.8);
+
+// GAIN STRUCTURE
+const gain = new Tone.Gain(1);
 gain.toDestination();
-
-samples.forEach(sample => sample.connect(gain));
-
+samplers.forEach(sample => sample.connect(gain));
 
 
-const $rows = document.body.querySelectorAll('div.checkbox'),
-      notes = ['C1', 'C2', 'G1'];
-let index = 0;
 
 
-Tone.Transport.scheduleRepeat(repeat, '16n');
 
-function repeat(time) {
-  let step = index % 16;
-  for (let i = 0; i < pattern1.length; i++) {
-    let sample = samples[i],
-        note = notes[i],
-        pattern1 = pattern1[i],
-        $input = $row.querySelector(`input:nth-child(${step + 1})`);
-    if ($input.checked) sample.triggerAttackRelease(note, '16n', time);
-  }
-  index++;
-}
+
+
+
+
+
+
+
+
 
 // Play - Stop toggle button
 const startToggleBtn = document.getElementById('start-stop');
 
 startToggleBtn.addEventListener('click', (event) => {
   Tone.Transport.toggle();
+  pattern1.start(); 
 });
 
 
-// making sampler
-const sampler = new Tone.Sampler({
-	"C1" : "TR808/BD/BD5050.wav",
-	"C2" : "TR808/SD/SD5050.wav",
-	"C3" : "TR808/LT/LT10.wav",
-	"C4" : "TR808/MT/MT10.wav",
-}, function(){
-	//sampler will repitch the closest sample
-	sampler.triggerAttack("C1")
-})
 
 
 const stepBtnContainer = document.querySelectorAll("button.samplebtn");
 
 const step1Btn = document.getElementById('s1');
+step1Btn.addEventListener('click', (event) => {
+  if (BDSequence[0][0] == null) {
+    BDSequence[0][0] = "C1";
+
+  } else {
+    BDSequence[0][0] = null;
+  }
+});
+
 const step2Btn = document.getElementById('s2');
 const step3Btn = document.getElementById('s3');
 const step4Btn = document.getElementById('s4');
