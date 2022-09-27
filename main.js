@@ -1,6 +1,6 @@
 // Disable text selection on whole page
 
-const { start } = require("tone");
+
 
 const disableselect = (e) => {  
   return false  

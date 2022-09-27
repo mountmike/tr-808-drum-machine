@@ -1,55 +1,51 @@
-const { Tone } = require("tone/build/esm/core/Tone");
-
 let toneStart = 0;
-
 
 function mousePressed(){
   if (toneStart = 0){
     Tone.start();
     toneStart = 1;
   }
-
   //place other code needed in function mousePressed() here
 }
 
 
-console.clear();
+const samples = [
+  new Tone.Sampler({
+	"C1" : "TR808/BD/BD5050.wav",
+	"C2" : "TR808/SD/SD5050.wav",
+}),
 
-// UPDATE: there is a problem in chrome with starting audio context
-//  before a user gesture. This fixes it.
-document.documentElement.addEventListener('mousedown', () => {
-  if (Tone.context.state !== 'running') Tone.context.resume();
-});
-
-const synths = [
-  new Tone.Synth(),
-  new Tone.Synth(),
-  new Tone.Synth()
 ];
 
-synths[0].oscillator.type = 'triangle';
-synths[1].oscillator.type = 'sine';
-synths[2].oscillator.type = 'sawtooth';
+// new sequence
+let pattern1 = new Tone.Sequence(function(time, note){
+	console.log(note);
+//straight quater notes
+}, ["C1", "C1", "C1", "C1"], "4n");
 
-const gain = new Tone.Gain(0.5);
+
+const gain = new Tone.Gain(0.8);
 gain.toDestination();
 
-synths.forEach(synth => synth.connect(gain));
+samples.forEach(sample => sample.connect(gain));
+
+
 
 const $rows = document.body.querySelectorAll('div.checkbox'),
-      notes = ['G4', 'E4', 'G1'];
+      notes = ['C1', 'C2', 'G1'];
 let index = 0;
 
-Tone.Transport.scheduleRepeat(repeat, '8n');
+
+Tone.Transport.scheduleRepeat(repeat, '16n');
 
 function repeat(time) {
-  let step = index % 8;
-  for (let i = 0; i < $rows.length; i++) {
-    let synth = synths[i],
+  let step = index % 16;
+  for (let i = 0; i < pattern1.length; i++) {
+    let sample = samples[i],
         note = notes[i],
-        $row = $rows[i],
+        pattern1 = pattern1[i],
         $input = $row.querySelector(`input:nth-child(${step + 1})`);
-    if ($input.checked) synth.triggerAttackRelease(note, '8n', time);
+    if ($input.checked) sample.triggerAttackRelease(note, '16n', time);
   }
   index++;
 }
@@ -61,10 +57,17 @@ startToggleBtn.addEventListener('click', (event) => {
   Tone.Transport.toggle();
 });
 
-//new sequence
-pattern1 = new Tone.Sequence();
 
-
+// making sampler
+const sampler = new Tone.Sampler({
+	"C1" : "TR808/BD/BD5050.wav",
+	"C2" : "TR808/SD/SD5050.wav",
+	"C3" : "TR808/LT/LT10.wav",
+	"C4" : "TR808/MT/MT10.wav",
+}, function(){
+	//sampler will repitch the closest sample
+	sampler.triggerAttack("C1")
+})
 
 
 const stepBtnContainer = document.querySelectorAll("button.samplebtn");
