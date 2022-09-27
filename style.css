@@ -342,6 +342,16 @@ footer {
 
 }
 
+#red-blink-active {
+  margin-top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--red);
+  border: 5px solid rgba(116, 116, 116, 0.5);
+
+}
+
 .samplebtn:hover {
   transform: scale(1.05);
   box-shadow: 2px 2px;

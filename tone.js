@@ -27,13 +27,13 @@ const samplers = [
 ];
 
 // SEQUENCES 
-let BDSequence = [[null, "C1", null, null], [null, null, null, null], [null, null, null, null],[null, null, null, null]];
+let BDSequence = [[null, null, null, null], [null, null, null, null], [null, null, null, null],[null, null, null, null]];
 
 let pattern1 = 
   new Tone.Sequence(function(time, note){
   samplers[0].triggerAttackRelease(note, 0.9);
 	console.log(note);
-}, BDSequence, "4n");
+}, BDSequence, "4n",);
 
 
 
@@ -41,12 +41,6 @@ let pattern1 =
 const gain = new Tone.Gain(1);
 gain.toDestination();
 samplers.forEach(sample => sample.connect(gain));
-
-
-
-
-
-
 
 
 
@@ -72,13 +66,23 @@ const step1Btn = document.getElementById('s1');
 step1Btn.addEventListener('click', (event) => {
   if (BDSequence[0][0] == null) {
     BDSequence[0][0] = "C1";
-
+    step1Btn.firstElementChild.style.backgroundColor = "red";
   } else {
     BDSequence[0][0] = null;
+    step1Btn.firstElementChild.style.backgroundColor = "#570000";
   }
 });
 
 const step2Btn = document.getElementById('s2');
+step2Btn.addEventListener('click', (event) => {
+  if (BDSequence[0][1] == null) {
+    BDSequence[0][1] = "C1";
+    step2Btn.firstElementChild.style.backgroundColor = "red";
+  } else {
+    BDSequence[0][1] = null;
+    step2Btn.firstElementChild.style.backgroundColor = "#570000";
+  }
+});
 const step3Btn = document.getElementById('s3');
 const step4Btn = document.getElementById('s4');
 const step5Btn = document.getElementById('s5');
