@@ -20,13 +20,6 @@ const openHatSample = new Audio("TR808/OH/OH10.wav");
 const closedHatSample = new Audio("TR808/CH/CH.wav");
 
 
-// Defining sample buttons
+const toggle = document.querySelector('#s1');
 
-const bassDrumBtn = document.querySelector('#s1');
-
-bassDrumBtn.addEventListener('click', function() {
-  bassDrumSample.currentTime = 0;
-  bassDrumSample.play();
-  });
-
-
+toggle.addEventListener('click', console.log('he');
