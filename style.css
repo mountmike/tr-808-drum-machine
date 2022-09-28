@@ -49,8 +49,7 @@ h3 {
 }
 
 footer {
-    display: flex;
-    height: 50px;
+  display: flex;
 }
 
 
@@ -756,4 +755,8 @@ footer {
   50% {
     opacity: 1;
   }
+}
+
+.step-sequencer {
+  visibility: hidden;
 }
