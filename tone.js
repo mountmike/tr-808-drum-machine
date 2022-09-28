@@ -20,10 +20,10 @@ const samplers = [
 	"C1" : "TR808/BD/BD5050.wav",
 }),
   new Tone.Sampler({
-  "C1" : "TR808/BD/BD5050.wav",
+  "C1" : "TR808/SD/SD0050.wav",
   }),
   new Tone.Sampler({
-  "C1" : "TR808/BD/BD5050.wav",
+  "C1" : "TR808/LT/LT00.wav",
   }),
 ];
 
@@ -36,7 +36,7 @@ gain.toMaster();
 samplers.forEach(sampler => sampler.connect(gain));
 
 const $rows = document.body.querySelectorAll('.step-sequencer > div'),
-      notes = ['C1', 'C2', 'G2'];
+      notes = ['C1', 'C1', 'C1'];
 let index = 0;
 
 Tone.Transport.scheduleRepeat(repeat, '16n');
@@ -48,7 +48,7 @@ function repeat(time) {
         note = notes[i],
         $row = $rows[i],
         $input = $row.querySelector(`input:nth-child(${step + 1})`);
-    if ($input.checked) sampler.triggerAttackRelease(note, '4n', time);
+    if ($input.checked) sampler.triggerAttackRelease(note, '2n', time);
   }
   index++;
 }
