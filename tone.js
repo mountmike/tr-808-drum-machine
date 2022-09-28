@@ -1,3 +1,4 @@
+
 let toneStart = 0;
 
 function mousePressed(){
@@ -18,7 +19,6 @@ document.documentElement.addEventListener('mousedown', () => {
 
 
 
-
 const samplers = [
   new Tone.Sampler({
 	"C1" : "TR808/BD/BD5050.wav",
@@ -27,7 +27,7 @@ const samplers = [
 ];
 
 // SEQUENCES 
-let BDSequence = [[null, null, null, null], [null, null, null, null], [null, null, null, null],[null, null, null, null]];
+let BDSequence = [[null, null, null, null], ["c1", null, null, null], [null, null, null, null],[null, null, null, null]];
 
 let pattern1 = 
   new Tone.Sequence(function(time, note){
@@ -41,7 +41,6 @@ let pattern1 =
 const gain = new Tone.Gain(1);
 gain.toDestination();
 samplers.forEach(sample => sample.connect(gain));
-
 
 
 
@@ -66,9 +65,11 @@ const step1Btn = document.getElementById('s1');
 step1Btn.addEventListener('click', (event) => {
   if (BDSequence[0][0] == null) {
     BDSequence[0][0] = "C1";
+    pattern1.start('4n'); 
     step1Btn.firstElementChild.style.backgroundColor = "red";
   } else {
     BDSequence[0][0] = null;
+    pattern1.start('4n'); 
     step1Btn.firstElementChild.style.backgroundColor = "#570000";
   }
 });
@@ -77,9 +78,11 @@ const step2Btn = document.getElementById('s2');
 step2Btn.addEventListener('click', (event) => {
   if (BDSequence[0][1] == null) {
     BDSequence[0][1] = "C1";
+    pattern1.start('4n'); 
     step2Btn.firstElementChild.style.backgroundColor = "red";
   } else {
     BDSequence[0][1] = null;
+    pattern1.start('4n'); 
     step2Btn.firstElementChild.style.backgroundColor = "#570000";
   }
 });
